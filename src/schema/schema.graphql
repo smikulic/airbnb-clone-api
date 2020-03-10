@@ -1,0 +1,22 @@
+type Query {
+  getPlaces(search: String): Places!
+}
+
+type Places {
+  places: [Place!]!
+  count: Int!
+}
+
+type Place {
+  id: String
+  host: String
+  beds: String
+  name: String
+  city: String
+  price: String
+  rating: String
+  country: String
+  details: String
+  slides: [String]
+  imageUrl: String
+}
