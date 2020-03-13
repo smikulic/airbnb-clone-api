@@ -39,9 +39,8 @@ const handlePagination = (places: Array<PlaceType>, args: IArgs) => {
 const resolverMap: IResolvers = {
   Query: {
     getPlaces(_: void, args: IArgs): Object {
-      const allPlaces = mockPlaces
-      const count = allPlaces.length
-      let places = handleSearching(allPlaces, args)
+      let places = handleSearching(mockPlaces, args)
+      const count = places.length
       places = handlePagination(places, args)
       
       return {
