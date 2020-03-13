@@ -1,5 +1,9 @@
 type Query {
-  getPlaces(search: String): Places!
+  getPlaces(
+  search: String,
+  pageSize: Int,
+  pageIndex: Int,
+  ): Places!
 }
 
 type Places {
@@ -10,7 +14,7 @@ type Places {
 type Place {
   id: String
   host: String
-  beds: String
+  beds: Int
   name: String
   city: String
   price: String
