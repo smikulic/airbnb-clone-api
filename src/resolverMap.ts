@@ -22,7 +22,7 @@ interface IArgs {
 }
 
 const handleSearching = (places: Array<PlaceType>, args: IArgs) => {
-  const searchTerm = args.search
+  const searchTerm = args.search.toLowerCase()
   const filteredByCity = places.filter(place => place.city.toLowerCase().includes(searchTerm))
   if (filteredByCity.length < 1) {
     return places.filter(place => place.country.toLowerCase().includes(searchTerm))
